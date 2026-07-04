@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Target, Eye, Award, Leaf, ShieldCheck, Users, Zap, Globe } from "lucide-react";
+import { Target, Eye, Leaf, ShieldCheck, Users, Zap, Globe } from "lucide-react";
 import SectionHeading from "@/components/shared/SectionHeading";
-import StatsCounter from "@/components/shared/StatsCounter";
 
 const values = [
   { icon: ShieldCheck, title: "Quality Assurance", desc: "Every system is tested to exceed international water quality standards before deployment." },
@@ -26,7 +25,7 @@ export default function About() {
           >
             <span className="inline-block text-xs font-display font-semibold uppercase tracking-[0.25em] text-[#0077FF] mb-4">About Us</span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6">
-              Pioneering Water Excellence Since 2008
+              Pioneering Water Excellence Across the UAE
             </h1>
             <p className="text-lg font-body text-white/60 leading-relaxed">
               Filtronix Water Solutions LLC is Abu Dhabi's trusted partner in water treatment engineering, delivering precision-built systems that protect health, enhance operations, and conserve resources.
@@ -87,8 +86,6 @@ export default function About() {
         </div>
       </section>
 
-      <StatsCounter />
-
       {/* Values */}
       <section className="py-24 lg:py-32 bg-[#F0F9FF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,9 +123,8 @@ export default function About() {
             label="Why Choose Us"
             title="The Filtronix Advantage"
           />
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: Award, title: "Certified Excellence", desc: "ISO 9001:2015 certified with full Abu Dhabi Municipality approvals and compliance with UAE drinking water standards." },
               { icon: Globe, title: "Regional Expertise", desc: "Deep understanding of the UAE's unique water challenges, from high TDS levels to extreme temperatures and arid conditions." },
               { icon: Zap, title: "End-to-End Solutions", desc: "From initial water analysis and system design to installation, commissioning, training, and ongoing maintenance support." },
             ].map((item, i) => (

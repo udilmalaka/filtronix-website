@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/shared/ContactForm";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+971 50 123 4567", href: "tel:+971501234567" },
-  { icon: Mail, label: "Email", value: "info@filtronix.ae", href: "mailto:info@filtronix.ae" },
+  { icon: Phone, label: "Phone", value: "+971 5225 72195", href: "tel:+971522572195" },
+  { icon: Mail, label: "Email", value: "info@filtronixsolutions.com", href: "mailto:info@filtronixsolutions.com" },
   { icon: MapPin, label: "Location", value: "Abu Dhabi, United Arab Emirates", href: null },
-  { icon: Clock, label: "Working Hours", value: "Sun–Thu: 8AM–6PM", href: null },
+  { icon: Clock, label: "Working Hours", value: "Mon–Fri: 9AM–6PM", href: null },
 ];
 
 export default function Contact() {
@@ -82,7 +82,7 @@ export default function Contact() {
                 <h4 className="text-lg font-display font-bold mb-2">Direct Engineering Support</h4>
                 <p className="text-sm font-body text-white/50 mb-4">Get instant answers from our technical team via WhatsApp.</p>
                 <a
-                  href="https://wa.me/971501234567?text=Hello%20Filtronix%2C%20I%27d%20like%20to%20inquire%20about%20your%20water%20solutions."
+                  href="https://wa.me/971522572195?text=Hello%20Filtronix%2C%20I%27d%20like%20to%20inquire%20about%20your%20water%20solutions."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

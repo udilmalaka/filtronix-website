@@ -5,10 +5,9 @@
     <title>Filtronix Water Solutions</title>
     <script type="text/javascript">
       // GitHub Pages SPA redirect workaround
-      // pathSegmentsToKeep = 1 because this is a project site served from
-      // https://udilmalaka.github.io/filtronix-website/ - the first path
-      // segment (the repo name) must be preserved, not stripped.
-      var pathSegmentsToKeep = 1;
+      // pathSegmentsToKeep = 0 because this now runs on the custom domain
+      // filtronixsolutions.com, served from root - no repo subpath to preserve.
+      var pathSegmentsToKeep = 0;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +

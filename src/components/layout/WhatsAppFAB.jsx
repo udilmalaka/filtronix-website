@@ -1,11 +1,10 @@
 import React from "react";
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
-
 export default function WhatsAppFAB() {
   return (
     <motion.a
-      href="https://wa.me/971501234567?text=Hello%20Filtronix%2C%20I%27d%20like%20to%20inquire%20about%20your%20water%20solutions."
+      href="https://wa.me/971522572195?text=Hello%20Filtronix%2C%20I%27d%20like%20to%20inquire%20about%20your%20water%20solutions."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#0077FF] hover:bg-[#0066DD] text-white px-5 py-3.5 rounded-full shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 group"

@@ -6,7 +6,6 @@ const quickLinks = [
   { label: "About Us", path: "/about" },
   { label: "Services", path: "/services" },
   { label: "Industries", path: "/industries" },
-  { label: "Projects", path: "/projects" },
   { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
 ];
@@ -50,7 +49,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-sm text-white/40">
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              Serving the UAE since 2008
+              Trusted by clients across the UAE
             </div>
           </div>
 
@@ -99,13 +98,13 @@ export default function Footer() {
               Contact
             </h4>
             <div className="space-y-4">
-              <a href="tel:+971501234567" className="flex items-start gap-3 text-white/60 hover:text-[#0077FF] transition-colors text-sm font-body">
+              <a href="tel:+971522572195" className="flex items-start gap-3 text-white/60 hover:text-[#0077FF] transition-colors text-sm font-body">
                 <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                +971 50 123 4567
+                +971 5225 72195
               </a>
-              <a href="mailto:info@filtronix.ae" className="flex items-start gap-3 text-white/60 hover:text-[#0077FF] transition-colors text-sm font-body">
+              <a href="mailto:info@filtronixsolutions.com" className="flex items-start gap-3 text-white/60 hover:text-[#0077FF] transition-colors text-sm font-body">
                 <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                info@filtronix.ae
+                info@filtronixsolutions.com
               </a>
               <div className="flex items-start gap-3 text-white/60 text-sm font-body">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
