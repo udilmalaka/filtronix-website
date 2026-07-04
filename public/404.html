@@ -5,9 +5,10 @@
     <title>Filtronix Water Solutions</title>
     <script type="text/javascript">
       // GitHub Pages SPA redirect workaround
-      // Converts the current path into a query string on index.html,
-      // which main.jsx / a small inline script then restores via history.replaceState.
-      var pathSegmentsToKeep = 0;
+      // pathSegmentsToKeep = 1 because this is a project site served from
+      // https://udilmalaka.github.io/filtronix-website/ - the first path
+      // segment (the repo name) must be preserved, not stripped.
+      var pathSegmentsToKeep = 1;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
