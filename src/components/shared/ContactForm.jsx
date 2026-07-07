@@ -8,17 +8,47 @@ import { motion } from "framer-motion";
 
 export default function ContactForm({ compact = false }) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", service: "", message: ""
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    }, 3000);
+    setSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xdarjqll", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+        }, 4000);
+      } else {
+        setError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -87,11 +117,15 @@ export default function ContactForm({ compact = false }) {
         rows={compact ? 3 : 5}
         className="bg-white border-[#E2E8F0] font-body placeholder:text-[#0A192F]/30 focus:border-[#0077FF] focus:ring-[#0077FF]/20 resize-none"
       />
+      {error && (
+        <p className="text-sm font-body text-red-500">{error}</p>
+      )}
       <Button
         type="submit"
-        className="w-full h-12 bg-[#0077FF] hover:bg-[#0066DD] text-white font-body font-semibold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 group"
+        disabled={submitting}
+        className="w-full h-12 bg-[#0077FF] hover:bg-[#0066DD] text-white font-body font-semibold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 group disabled:opacity-60"
       >
-        Send Inquiry
+        {submitting ? "Sending..." : "Send Inquiry"}
         <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
       </Button>
     </form>
